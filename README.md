@@ -1,2 +1,4 @@
-# __2024_09_04_tvdi__-A
-recover tvdi repo
+# __2024_09_04_tvdi__
+## This is a training school
+## the commit is for version control
+TVDI python training course
