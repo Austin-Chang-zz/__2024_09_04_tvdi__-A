@@ -49,7 +49,6 @@ class MyForm(FlaskForm):
 @app.route("/faqs",methods=['POST','GET'])
 def faqs():
     myForm = MyForm()
-
     return render_template('faqs.j2',myform = myForm)
 
 @app.route("/about")
