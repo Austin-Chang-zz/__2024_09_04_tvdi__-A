@@ -11,7 +11,6 @@ from lesson18_2 import app1
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
 
-
 application = DispatcherMiddleware(
     app,
     {"/dash": app1.server},
@@ -55,10 +54,11 @@ class MyForm(FlaskForm):
     epaper_field = BooleanField("訂閱電子報")
     submit_field = SubmitField("確定送出")
 
-@app.route("/login",methods=['POST','GET'])
-def login():
+@app.route("/faqs",methods=['POST','GET'])
+def faqs():
     myForm = MyForm()
-    return render_template('login.j2',myform = myForm)
+
+    return render_template('faqs.j2',myform = myForm)
 
 @app.route("/about")
 def about():
@@ -68,6 +68,5 @@ def about():
 def success():
     return "<h1>登入成功</h1>"
 
-print(__name__)
-if __name__ == "__main__":    
+if __name__ == "__main__":
     run_simple("localhost", 8080, application,use_debugger=True,use_reloader=True)
