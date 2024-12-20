@@ -49,7 +49,7 @@ def pricing():
                             page = page) 
 
 
-
+#--------------------------
 @app.route("/about")
 def about():
     return render_template('about.j2')
